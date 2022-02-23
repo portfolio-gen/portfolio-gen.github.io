@@ -1,0 +1,21 @@
+{
+  "actions": [
+    {
+      "actionType": "COPY_DIRECTORY",
+      "inputLocation": "src/main/resources/templates/online-cv",
+      "outputLocation": "out/generated-templates"
+    },
+    {
+      "actionType": "PROCESS_TEMPLATE",
+      "inputLocation": "out/generated-templates/%s/_data/data-template.txt",
+      "outputLocation": "out/generated-templates/%s/_data/data.yml"
+    },
+    {
+      "actionType": "DELETE_FILE",
+      "inputLocation": "out/generated-templates/%s/_data/data-template.txt"
+    },
+    {
+      "actionType": "DEPLOY_STATIC_SITE"
+    }
+  ]
+}
